@@ -106,20 +106,20 @@ function NPC:FindNearestPlayer()
 end
 
 function NPC:PatrolPoint()
-	local targetPos = self.targetPos
-	local humanoid = self.humanoid 
+	-- local targetPos = self.targetPos
+	-- local humanoid = self.humanoid 
 	
-	if self.state ~= "Chasing" then
-		self.state = "Patroling"
+	-- if self.state ~= "Chasing" then
+	-- 	self.state = "Patroling"
 		
-		print("patroling: "..self.state)
-		humanoid:MoveTo(targetPos)
-		humanoid.WalkSpeed = self.speed
+	-- 	print("patroling: "..self.state)
+	-- 	humanoid:MoveTo(targetPos)
+	-- 	humanoid.WalkSpeed = self.speed
 		
-		--humanoid:MoveTo(targetPos).Finished:Wait()
-		self.state = "idle"
-		--self:ReturnBack()
-	end
+	-- 	--humanoid:MoveTo(targetPos).Finished:Wait()
+	-- 	self.state = "idle"
+	-- 	--self:ReturnBack()
+	-- end
 end
 
 function NPC:Died()
@@ -127,3 +127,4 @@ function NPC:Died()
 end
 
 return NPC
+
