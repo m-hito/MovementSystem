@@ -1,8 +1,6 @@
-local models = script.Parent.Parent
+local models = script.Parent.Parent -- Workspace.World.Live (put all models inside live to move the npc)
 
 local Noob = require(game.ServerStorage.Modules.Movement.Noob)
-
--- Setup NPCs, here make models in ur workspace under a folder called "Live" inside "World" thats all u gotta do
 local npcCharacter1 = script.Parent
 local npcCharacter2 = workspace.World.Live.Noob2
 
@@ -15,19 +13,19 @@ local npcStored = {
 	
 }
 
-for _, npc in pairs(models:GetChildren()) do
+for _, npc in pairs(models:GetChildren()) do -- get all npcs here automatically 
+	
+	
 	if npc:FindFirstChild("Humanoid") then
 		local npcHumanoid = npc:FindFirstChild("Humanoid")
-
-		npcStored[npc.Name] = Noob.new(npcHumanoid, targetPos)
-
+		npcStored[npc.Name] = Noob.new(npcHumanoid, targetPos) -- store it inside npcStored (print it)
 	end
 
 end
-
-local noob1 = Noob.new(humanoid, targetPos)
-local noob2 = Noob.new(humanoid2, targetPos)
-local enemies = {noob1, noob2}
+print(npcStored)
+--local noob1 = Noob.new(humanoid, targetPos) (this is manual easy way to make npc)
+--local noob2 = Noob.new(humanoid2, targetPos)
+--local enemies = {noob1, noob2}
 
 --noob1:Move()
 --noob2:Move()
@@ -42,12 +40,12 @@ end
 
 game:GetService("RunService").Heartbeat:Connect(function()
 	local currentTime = tick()
-
+	local currModel
+	
 	for _, enemy in pairs(npcStored) do
+		
 		if currentTime - enemy.lastTimeCheck >= enemy.checkInterval then
 			enemy.lastTimeCheck = currentTime
-			
-			
 			enemy:ChasingNPC()  -- Only every 0.5 sec, no blocking
 			enemy:PatrolPoint()
 		end
