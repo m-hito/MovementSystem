@@ -18,7 +18,7 @@ end
 
 
 function Noob:EquipTool()
-
+	-- add ur methods here if u want
 end
 
 function Noob:ActivateTool()
