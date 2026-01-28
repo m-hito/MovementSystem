@@ -31,7 +31,7 @@ function NPC:Move()
 	local targetPos = self.targetPos
 	local humanoid = self.humanoid
 	self.state = "moving"
-	--print(self.state.."Move() function executed")
+	print(self.state.."Move() function executed")
 	
 	humanoid.WalkSpeed = self.speed
 
@@ -45,7 +45,7 @@ function NPC:ReturnBack()
 	local targetPos = self.currPos
 	local humanoid = self.humanoid
 	self.state = "returning"
-	--print(self.state.."ReturnBack() function executed")
+	print(self.state.."ReturnBack() function executed")
 	
 	humanoid.WalkSpeed = self.speed
 	humanoid:MoveTo(targetPos)
@@ -59,7 +59,7 @@ function NPC:ChasingNPC()
 
 	if nearestPlayer then
 		self.state = "chasing"
-		--print(self.state.." Found nearest player..chasing him")
+		print(self.state.." Found nearest player..chasing him")
 		
 		targetPos = nearestPlayer:GetPivot().Position
 		humanoid:MoveTo(targetPos)
@@ -69,8 +69,8 @@ function NPC:ChasingNPC()
 		
 		self.state = "idle"
 
-		--print(self.state)
-		--print(self.state.." lost track of player return to orignal patrol point ")
+		print(self.state)
+		print(self.state.." lost track of player return to orignal patrol point ")
 	end
 
 end
@@ -88,7 +88,7 @@ function NPC:FindNearestPlayer()
 			if player.Character and player.Character.Humanoid.Health > 0 then
 				local playerPos = player.Character.HumanoidRootPart.Position
 				local distance = (playerPos - self.currPos).Magnitude
-				print(distance, self.humanoid.Parent.Name)
+				--print(distance, self.humanoid.Parent.Name)
 				
 				if distance > self.radius then return end 
 				
@@ -106,20 +106,8 @@ function NPC:FindNearestPlayer()
 end
 
 function NPC:PatrolPoint()
-	-- local targetPos = self.targetPos
-	-- local humanoid = self.humanoid 
+	-- add ur own logic if u want to work further
 	
-	-- if self.state ~= "Chasing" then
-	-- 	self.state = "Patroling"
-		
-	-- 	print("patroling: "..self.state)
-	-- 	humanoid:MoveTo(targetPos)
-	-- 	humanoid.WalkSpeed = self.speed
-		
-	-- 	--humanoid:MoveTo(targetPos).Finished:Wait()
-	-- 	self.state = "idle"
-	-- 	--self:ReturnBack()
-	-- end
 end
 
 function NPC:Died()
@@ -127,4 +115,3 @@ function NPC:Died()
 end
 
 return NPC
-
