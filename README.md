@@ -14,11 +14,11 @@ ServerStorage
 -    ├── Noob (ModuleScript) [Base class]
 -    └── [Add child classes here] [Patrol, Chase, etc.]
 
-Workspace
+Workspace           
 -    └── World (Folder)
 -    └── Live (Folder)
 -    ├── BossNpc (Model)
--    │     └── MovementSetup (Script)
+-    │      └── MovementSetup (Script)
 -    ├── Npc1 (Model)
 -    ├── Npc2 (Model)
 -    ├── Npc3 (Model)
