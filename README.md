@@ -1,31 +1,40 @@
-MovementSystem
-Modular Is-A/Has-A composition system for NPC AI movement. Handles 100s of NPCs without lag—each with custom walkspeed, patrol range, and data components. Fits any game (non-monolithic).
+# 🚀 **MovementSystem** - Modular NPC AI
 
-Features
-Individual NPC customization (walkspeed, patrol range)
-Zero-lag performance (100+ NPCs)
-Extensible class system
-Server-authoritative movement
+**Modular Is-A/Has-A composition system** for **NPC AI movement**. Handles **100s of NPCs** without lag—each with **custom walkspeed, patrol range, and data components**. **Fits any game** (non-monolithic).
 
-Folder Structure
-text
+## ✨ **Features**
+- **Individual NPC customization** (walkspeed, patrol range)
+- **Zero-lag performance** (100+ NPCs)
+- **Extensible class system**
+- **Server-authoritative movement**
+
+## 📁 **Folder Structure**
 ServerStorage
-└── Movement (ModuleScript)
-    ├── Noob (ModuleScript)        [Base class]
-    └── [Add child classes here]   [Patrol, Chase, etc.]
-    
+-    └── Movement (ModuleScript)
+-    ├── Noob (ModuleScript) [Base class]
+-    └── [Add child classes here] [Patrol, Chase, etc.]
+
 Workspace
-└── World (Folder)
-    └── Live (Folder)
-        ├── BossNpc (Model)
-        │   └── MovementSetup (Script)
-        ├── Npc1 (Model)
-        ├── Npc2 (Model)
-        ├── Npc3 (Model)
-        └── [Scale to 100s...]
-Usage
+-    └── World (Folder)
+-    └── Live (Folder)
+-    ├── BossNpc (Model)
+-    │     └── MovementSetup (Script)
+-    ├── Npc1 (Model)
+-    ├── Npc2 (Model)
+-    ├── Npc3 (Model)
+-    └── [Scale to 100s...]
 text
-1. Paste Movement folder to ServerStorage
-2. Add NPCs to Workspace/World/Live  
-3. Each NPC auto-loads MovementSetup script
-4. Customize via Attributes (WalkSpeed, PatrolRange)
+
+## 🚀 **Usage**
+
+1. **Paste Movement folder** to **ServerStorage**
+2. **Add NPCs** to **Workspace/World/Live**  
+3. **Each NPC auto-loads** **MovementSetup script**
+4. **Customize via Attributes** (`WalkSpeed`, `PatrolRange`)
+
+---
+
+**Status:** **Production-ready NPC AI foundation**  
+**Scales to 100s of NPCs** **Zero configuration** **Plug & play**
+
+> **"100 NPCs. Zero lag. One system."**
