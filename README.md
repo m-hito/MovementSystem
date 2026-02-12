@@ -9,21 +9,22 @@
 - **Server-authoritative movement**
 
 ## 📁 **Folder Structure**
+``` text
 ServerStorage
--    └── Movement (ModuleScript)
--    ├── Noob (ModuleScript) [Base class]
--    └── [Add child classes here] [Patrol, Chase, etc.]
+    └── Movement (ModuleScript)
+    ├── Noob (ModuleScript) [Base class]
+    └── [Add child classes here] [Patrol, Chase, etc.]
 
 Workspace           
--    └── World (Folder)
--    └── Live (Folder)
--    ├── BossNpc (Model)
--    │      └── MovementSetup (Script)
--    ├── Npc1 (Model)
--    ├── Npc2 (Model)
--    ├── Npc3 (Model)
--    └── [Scale to 100s...]
-text
+   └── World (Folder)
+   └── Live (Folder)
+   ├── BossNpc (Model)
+   │      └── MovementSetup (Script)
+   ├── Npc1 (Model)
+   ├── Npc2 (Model)
+   ├── Npc3 (Model)
+   └── [Scale to 100s...]
+```
 
 ## 🚀 **Usage**
 
